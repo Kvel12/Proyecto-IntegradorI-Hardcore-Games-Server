@@ -1,5 +1,5 @@
 {
-  "name": "sphere-websockets-r3f-server",
+  "name": "ProyectoIntegrador-2024-1-server",
   "version": "1.0.0",
   "description": "Sphere websockets server",
   "main": "src/server.js",
