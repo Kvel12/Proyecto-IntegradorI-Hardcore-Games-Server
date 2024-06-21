@@ -1,0 +1,15 @@
+{
+  "name": "sphere-websockets-r3f-server",
+  "version": "1.0.0",
+  "description": "Sphere websockets server",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [],
+  "author": "Fabian Stiven Valencia Cordoba",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^4.7.5"
+  }
+}
