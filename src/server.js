@@ -40,6 +40,23 @@ io.on("connection", (socket) => {
     ". There are " + io.engine.clientsCount + " players connected."
   );
 
+  socket.on('unlock-platform', (platform) => {
+    console.log("Unlocking platform:", platform);  // Añade este log
+    platformStates[platform] = true;
+    console.log("Updated platform states:", platformStates);  // Añade este log
+    io.emit('update-platforms', platformStates);
+  });
+
+  let platformStates = {
+    platform5: false,
+    rest: false
+  };
+  
+  socket.on('unlock-platform', (platform) => {
+    platformStates[platform] = true;
+    io.emit('update-platforms', platformStates);
+  });
+
   /**
    * Handle a player's movement.
    * Broadcast the transforms to other player.
