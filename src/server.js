@@ -3,7 +3,7 @@
 const { Server } = require("socket.io");
 
 const clientURLLocalhost = "http://localhost:3000";
-const clientUrlDeploy = "https://sphere-websockets-r3f-client.vercel.app";
+const clientUrlDeploy = "https://proyecto-integrador-i-hardcore-games.vercel.app";
 
 const port = process.env.PORT || 8080;
 
