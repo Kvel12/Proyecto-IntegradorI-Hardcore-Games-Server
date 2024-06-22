@@ -5,7 +5,7 @@ const { Server } = require("socket.io");
 const clientURLLocalhost = "http://localhost:3000";
 const clientUrlDeploy = "https://sphere-websockets-r3f-client.vercel.app";
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 const io = new Server({
   cors: {
@@ -32,6 +32,10 @@ let gameState = {
     Start1: true,
     Start2: true,
     Start3: true
+  },
+  playersTouchingFlag: {
+    player1: false,
+    player2: false
   }
 };
 
